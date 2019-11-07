@@ -8,9 +8,38 @@
 </head>
 
 <body>
-    
 
-    
-    
+    <h1>Password Generator</h1>
+
+<form onsubmit=generate()>
+Password Length (between 8 and 128):
+<input id="usrInputLength" type="number" name="quantity" min="8" max="128"><br>
+<input type="submit" value="Generate">
+</form>
+
+<p>your password is:</p>
+<p id="passwordBox"></p>
+
+<script src="script.js"></script>
+<!--
+<script>
+
+var passLength = document.getElementById("usrInputLength");
+var passValues = [];
+var password;
+
+function generate(){
+for (var i = 0;i <= passLength-1;i++) {
+randomNumber = Math.floor(Math.random()*10);
+passValues.push(randomNumber);
+}
+var password = passValues.join("");
+} 
+
+console.log(passLength)
+alert(password) 
+
+</script>
+-->
 </body>
 </html>
