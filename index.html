@@ -5,20 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
 
     <h1>Password Generator</h1>
 
-<form onsubmit=generate()>
-Password Length (between 8 and 128):
-<input id="usrInputLength" type="number" name="quantity" min="8" max="128"><br>
-<input type="submit" value="Generate">
-</form>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="numeric" onclick="numCheck(this)">
+      <label class="form-check-label" for="numeric">Numeric</label>
+    </div>
 
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="lowercase" onclick="lwCheck(this)">
+        <label class="form-check-label" for="lowercase">Lowercase</label>
+      </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="uppercase" onclick="upCheck(this)">
+          <label class="form-check-label" for="uppercase">Uppercase</label>
+        </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="special" onclick="spCheck(this)">
+            <label class="form-check-label" for="special">Special</label>
+          </div>
+        
+            <form>  
+              Password Length (between 8 and 128):
+              <input id="usrInputLength" type="number" name="quantity" min="8" max="128"><br>
+              <input type="submit" value="Generate">
+            </form>
+
+
+<!--
 <p>your password is:</p>
-<p id="passwordBox"></p>
+<p id="passwordBox"></p>-->
 
 <script src="script.js"></script>
 <!--
