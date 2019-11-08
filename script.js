@@ -1,12 +1,33 @@
 var passLength = document.getElementById("usrInputLength");
 var passValues = [];
 var password;
+var passwordNode;
 
-function generate(){
-for (var i = 0;i <= passLength-1;i++) {
-randomNumber = Math.floor(Math.random()*10);
-passValues.push(randomNumber);
+/*var ElNumCk = document.querySelector("#numeric");
+
+ElNumCk.setAttribute(false);*/
+
+function numCheck(cb) {
+  if (cb.checked === true) {
+      passValues.push(1,2,3,4,5,6,7,8,9,0);
+      console.log(passValues);
+  }
 }
-var password = passValues.join("");
-document.getElementById("passwordBox").innerText = password;
-} 
+  function lwCheck(cb) {
+    if (cb.checked === true) {
+        passValues.push("a","b","c","d");
+        console.log(passValues);
+    }
+  }
+    function upCheck(cb) {
+        if (cb.checked === true) {
+            passValues.push("A","B","C","D");
+            console.log(passValues);
+        }
+    }
+        function spCheck(cb) {
+            if (cb.checked === true) {
+                passValues.push("\@","\#","\!","\%");
+                console.log(passValues);
+            }
+        }
