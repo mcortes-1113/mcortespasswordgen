@@ -11,6 +11,14 @@ btnEl.addEventListener('click', function genPass() {
     var upCB = document.querySelector("#uppercase");
     var spCB = document.querySelector("#special");
 
+        if (numCB.checked === false && lwCB.checked === false && upCB.checked === false && spCB.checked === false) {
+            alert("You must select at least 1 Character Type");
+            return;
+        }
+        if (passLengthEl.value === "" || passLengthEl.value < 8 || passLengthEl.value > 128) {
+            alert("Please enter a value between 8 and 128 for Password length");
+            return;
+        }
         if (numCB.checked === true) {
             passChPool.push(1,2,3,4,5,6,7,8,9,0);}
 
