@@ -1,0 +1,24 @@
+#bar {
+    background-color: #45a29e;
+    color: #red;
+}
+
+body {
+    background-color: #c5c6c7;
+}
+
+.jumbotron {
+    background-color: #0b0c10;
+}
+
+h1 {
+    color: #66fcf1;
+}
+
+#jumbolead, #instructions {
+    color: #c5c6c7;
+}
+
+#instructions {
+    font-weight: bold;
+}
