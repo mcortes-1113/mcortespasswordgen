@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!--NavBar Begins-->
-  <nav class="navbar navbar-dark bg-dark fixed-top" style="padding:0px;">
+  <nav id="bar" class="navbar navbar-dark bg-dark fixed-top" style="padding:0px;">
       <span class="navbar-brand mb-0">Password Generator by Mario Cortes</span>
   </nav>
   <!--NavBar Ends-->      
@@ -23,9 +24,9 @@
 
           <div class="jumbotron">
               <h1 class="display-4">Welcome to my Password Generator App!</h1>
-              <p class="lead">This application will generate a random password that will match the requirements selected by the user.</p>
+              <p id="jumbolead" class="lead">This application will generate a random password that will match the requirements selected by the user.</p>
               <hr class="my-4">
-              <p>Please select your password requirements below and then click on the "Generate Password" button.</p>
+              <p id="instructions">Please select your password requirements below and then click on the "Generate Password" button.</p>
           </div>
 
         </div>
@@ -109,65 +110,57 @@
                                 <!--Row 4-->            
                                 <div class="row" style="margin-bottom: 40px; margin-top: 20px;">     
                                 
-                                  <button id="btn" type="button" class="btn btn-primary btn-lg btn-block">Generate Password</button>
-
+                                  <button id="btn" type="button" class="btn btn-primary btn-lg btn-block">
+                                    Generate Password
+                                  </button>
+                                      
                                 </div>
 
+
+                                    <!--Row 5-->                
+                                    <div id="passwordRow" class="row" style="margin-bottom: 40px; margin-top: 20px; visibility: hidden;">             
+                                          
+                                      <div class="col-md-3" style="margin-bottom: 10px;">
+                                        <label class="form-check-label" for="numeric" aria-hidden="false">Your Password Is:</label>
+                                      </div>
+                                        <div class="col-md-9" style="margin-bottom: 10px;">
+                                            <p id="passwordResult"></p>
+                                        </div>
+                                           
+                                    </div>
+
+                                        <!--Row 6-->            
+                                          <div id="copyRow" class="row" style="margin-bottom: 40px; margin-top: 20px; visibility: hidden;">     
+                                          
+                                              <button id="copyBtn" type="button" class="btn btn-primary btn-lg btn-block">
+                                                Copy To Clipboard
+                                              </button>
+                                                  
+                                          </div>
+
+
     </div><!--Container-->  
-<!--
-    <h1>Password Generator</h1>
 
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="numeric">
-      <label class="form-check-label" for="numeric">Numeric</label>
-    </div>
-
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="lowercase" >
-        <label class="form-check-label" for="lowercase">Lowercase</label>
-      </div>
-
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="uppercase">
-          <label class="form-check-label" for="uppercase">Uppercase</label>
-        </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="special">
-            <label class="form-check-label" for="special">Special</label>
-          </div>
-        
-            <div>  
-              Password Length (between 8 and 128):
-              <input id="usrLength" type="number" name="quantity"><br>
-              <input id="btn" type="submit" value="Generate">
-            </div>
-          -->
-            <!--Footer Begins-->
-            <style>.footer{
-                position: fixed;
-                left: 0px;
-                bottom: 0px;
-                width: 100%;
-                background-color: #343a40;
-                color: white;
-                text-align: center;
-                margin: 0px;
-                font-size: 8pt;
-                line-height: 15px;
-                padding: 5px 0px;
-                }                 
-    </style>
-        <p class="footer">Copyright &copy;</p>
+        <!--Footer Begins-->
+        <style>.footer{
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            margin: 0px;
+            font-size: 8pt;
+            line-height: 15px;
+            padding: 5px 0px;
+            }                 
+        </style>
+          <p class="footer">Copyright &copy;</p>
         <!--Footer Ends-->
-
-
-
-<!--copy to clipboard element
-            <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
--->
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
