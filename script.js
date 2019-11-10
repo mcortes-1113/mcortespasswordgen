@@ -4,6 +4,10 @@ var numCB = document.querySelector("#numeric");
 var lwCB = document.querySelector("#lowercase");
 var upCB = document.querySelector("#uppercase");
 var spCB = document.querySelector("#special");
+var passMsg = document.querySelector("#passwordResult");
+var passRow = document.querySelector("#passwordRow");
+var passCopy = document.querySelector("#copyRow");
+var passBtn = document.querySelector("#copyBtn");
 var passChPool = [];
 var passValues = [];
 var password = "";
@@ -17,6 +21,16 @@ function clrValues() {
     upCB.checked = false;
     spCB.checked = false;
     };
+
+passBtn.addEventListener("click", function copy() {
+    var passMsg = document.querySelector("#passwordResult");
+
+        passMsg.select();
+        passMsg.setSelectionRange(0, 99999);      
+        document.execCommand("copy");
+        alert("Your Password: " + passMsg.value + "has been copied to the clipboard");
+})
+
 
 btnEl.addEventListener('click', function genPass() {
     passChPool.length = 0; 
@@ -48,8 +62,9 @@ btnEl.addEventListener('click', function genPass() {
                 passValues.push(rand);
             }
                 password = passValues.join("");
-                console.log("the password is " + password);
-                password = "";
-                console.log("the new password is" + password);
+                passRow.style.visibility = "visible";
+                passCopy.style.visibility = "visible";                
+                passMsg.textContent = password;
                 return clrValues();
 });
+
