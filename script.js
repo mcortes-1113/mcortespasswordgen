@@ -22,15 +22,14 @@ function clrValues() {
     spCB.checked = false;
     };
 
-passBtn.addEventListener("click", function copy() {
-    var passMsg = document.querySelector("#passwordResult");
-
-        passMsg.select();
-        passMsg.setSelectionRange(0, 99999);      
+/*passBtn.addEventListener("click", function copy() {
+    var passClip = document.getElementById("passwordResult");
+        passClip.select();
+        //passClip.setSelectionRange(0, 99999);      
         document.execCommand("copy");
-        alert("Your Password: " + passMsg.value + "has been copied to the clipboard");
-})
-
+        alert("Your Password: \"" + passClip.value + "\" has been copied to the clipboard");
+        return; 
+});*/
 
 btnEl.addEventListener('click', function genPass() {
     passChPool.length = 0; 
@@ -63,7 +62,7 @@ btnEl.addEventListener('click', function genPass() {
             }
                 password = passValues.join("");
                 passRow.style.visibility = "visible";
-                passCopy.style.visibility = "visible";                
+                //passCopy.style.visibility = "visible";                
                 passMsg.textContent = password;
                 return clrValues();
 });
