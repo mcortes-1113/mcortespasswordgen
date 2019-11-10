@@ -1,6 +1,12 @@
-#bar {
-    background-color: #45a29e;
-    color: #red;
+#navBar {
+    background-color: #0b0c10;
+    padding: 20px;
+}
+
+#navTitle {
+    color: #66fcf1;
+    padding: 5px;
+    text-align: center;
 }
 
 body {
@@ -9,6 +15,10 @@ body {
 
 .jumbotron {
     background-color: #0b0c10;
+    padding: 20px 40px;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
 }
 
 h1 {
@@ -20,5 +30,83 @@ h1 {
 }
 
 #instructions {
+    font-weight: bold;
+}
+
+.col-md-12 {
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0px;
+    font-weight: bolder;
+    color: #0b0c10;
+    font-size: 16pt;
+    border: 0pt;
+}
+
+.col-md-3 {
+    color: #45a29e;
+    background-color: #0b0c10;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14pt;
+    border: 0pt;
+}
+
+.col-md-4 {
+    color: #45a29e;
+    background-color: #0b0c10;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14pt;
+    border: 0pt;
+}
+
+.col-md-2 {
+    color: #45a29e;
+    background-color: #0b0c10;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14pt;
+    border: 0pt;
+}
+
+#usrLength {
+    background-color: #c5c6c7;
+}
+
+#btn {
+    color: #45a29e;
+    background-color: #1f2833;
+    border: 0 solid #1f2833;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+#passwordRow {
+    height: fit-content;
+    border: 2px solid #1f2833;
+
+}
+#passwordIs {
+    text-align: right;
+    vertical-align: middle;
+}
+
+#passwordResult {
+    background-color: #c5c6c7;
+    color: #1f2833;
+    vertical-align: center;
+    font-size: 14pt;
+    word-wrap: break-word;
+    padding: 2px;
+    font-weight: bold;
+}
+
+#copyBtn {
+    color: #1f2833;
+    background-color: #45a29e;
+    border: 0;
+    font-size: 16pt;
     font-weight: bold;
 }
