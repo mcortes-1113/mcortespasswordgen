@@ -1,40 +1,43 @@
-var passLength = document.getElementById("usrLength");
-var btnEl = document.getElementById("btn");
-var passChPool = [];
+var passLengthEl = document.querySelector("#usrLength");
+var btnEl = document.querySelector("#btn");
 var passValues = [];
-var password;
+var password = "";
 
-btnEl.addEventListener('click', genPass());
+btnEl.addEventListener('click', function genPass() {
+    
+    var passChPool = [];
+    var numCB = document.querySelector("#numeric");
+    var lwCB = document.querySelector("#lowercase");
+    var upCB = document.querySelector("#uppercase");
+    var spCB = document.querySelector("#special");
 
-function numCheck(cb) {
-  if (cb.checked === true) {
-      passChPool.push(1,2,3,4,5,6,7,8,9,0);
-  }
-}
-  function lwCheck(cb) {
-    if (cb.checked === true) {
-        passChPool.push("a","b","c","d");
-    }
-  }
-    function upCheck(cb) {
-        if (cb.checked === true) {
-            passChPool.push("A","B","C","D");
-        }
-    }
-        function spCheck(cb) {
-            if (cb.checked === true) {
-                passChPool.push("\@","\#","\!","\%");
-            }
-        }
+        if (numCB.checked === true) {
+            passChPool.push(1,2,3,4,5,6,7,8,9,0);}
 
-            function genPass(){
-                for (var i = 0;i <= passLength-1;i++) {
-                    var rand = passChPool([Math.floor(Math.random()*passChPool.length)]);
-                    passValues.push(rand);
+        if (lwCB.checked === true) {
+            passChPool.push("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z");}
+
+        if (upCB.checked === true) {
+            passChPool.push("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");}
+            
+        if (spCB.checked === true) {
+            passChPool.push("\!","\"","\#","\$","\%","\&","\'","\(","\)","\*","\+","\,","\-","\.","\/","\:","\;","\<","\=","\>","\?","\@","\[","\\","\]","\^","\_","\`","\{","\|","\}","\~");}
+
+             // alert(passChPool);
+
+            for (var i = 0;i <= (passLengthEl.value -1);i++) {
+                var rand = passChPool[Math.floor(Math.random()*passChPool.length)];
+                passValues.push(rand);
                 }
-//Need to fix issue with array value not being assigned to variable
-                    return passValues;
-                    alert("the password is ");
-                    alert(passValues);
-            }
-                
+
+                password = passValues.join("");
+                alert("the password is " + password);
+                function clrValues() {
+                    passChPool.length = "0"; 
+                    numCB.checked = false;
+                    lwCB.checked = false;
+                    upCB.checked = false;
+                    spCB.checked = false;
+                    };
+                return;
+});
