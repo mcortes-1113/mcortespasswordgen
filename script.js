@@ -1,15 +1,27 @@
 var passLengthEl = document.querySelector("#usrLength");
 var btnEl = document.querySelector("#btn");
+var numCB = document.querySelector("#numeric");
+var lwCB = document.querySelector("#lowercase");
+var upCB = document.querySelector("#uppercase");
+var spCB = document.querySelector("#special");
+var passChPool = [];
 var passValues = [];
 var password = "";
 
+function clrValues() {
+    passChPool.length = 0; 
+    passValues.Length = 0;
+    passLengthEl.value = "";
+    numCB.checked = false;
+    lwCB.checked = false;
+    upCB.checked = false;
+    spCB.checked = false;
+    };
+
 btnEl.addEventListener('click', function genPass() {
-    
-    var passChPool = [];
-    var numCB = document.querySelector("#numeric");
-    var lwCB = document.querySelector("#lowercase");
-    var upCB = document.querySelector("#uppercase");
-    var spCB = document.querySelector("#special");
+    passChPool.length = 0; 
+    passValues.Length = 0;
+    password = "";
 
         if (numCB.checked === false && lwCB.checked === false && upCB.checked === false && spCB.checked === false) {
             alert("You must select at least 1 Character Type");
@@ -31,21 +43,13 @@ btnEl.addEventListener('click', function genPass() {
         if (spCB.checked === true) {
             passChPool.push("\!","\"","\#","\$","\%","\&","\'","\(","\)","\*","\+","\,","\-","\.","\/","\:","\;","\<","\=","\>","\?","\@","\[","\\","\]","\^","\_","\`","\{","\|","\}","\~");}
 
-             // alert(passChPool);
-
             for (var i = 0;i <= (passLengthEl.value -1);i++) {
                 var rand = passChPool[Math.floor(Math.random()*passChPool.length)];
                 passValues.push(rand);
-                }
-
+            }
                 password = passValues.join("");
-                alert("the password is " + password);
-                function clrValues() {
-                    passChPool.length = "0"; 
-                    numCB.checked = false;
-                    lwCB.checked = false;
-                    upCB.checked = false;
-                    spCB.checked = false;
-                    };
-                return;
+                console.log("the password is " + password);
+                password = "";
+                console.log("the new password is" + password);
+                return clrValues();
 });
