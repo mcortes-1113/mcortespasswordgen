@@ -10,15 +10,15 @@
 </head>
 
 <body>
-
+<!--navbar-dark bg-dark -->
   <!--NavBar Begins-->
-  <nav id="bar" class="navbar navbar-dark bg-dark fixed-top" style="padding:0px;">
-      <span class="navbar-brand mb-0">Password Generator by Mario Cortes</span>
+  <nav id="navBar" class="navbar fixed-top" style="padding:0px;">
+      <span id="navTitle" class="navbar-brand mb-0">Password Generator by Mario Cortes</span>
   </nav>
   <!--NavBar Ends-->      
 
     <!--Grid Container Begins-->    
-    <div class="container" style="margin-top: 80px;">
+    <div class="container" style="margin-top: 60px; margin-bottom: 60px;">
         <!--Jumbotron Row-->
         <div class="row">
 
@@ -34,14 +34,14 @@
             <!--Instructions Row-->
             <div class="row">
 
-                <div class="col-md-12" style="border-bottom: 5px solid gray;">
-                <span>Please select at least 1 Character Type and the desired Password Length</span>
+                <div class="col-md-12">
+                <span>Select at least 1 Character Type and the desired Password Length</span>
                 </div>
 
             </div>
             
                 <!--Row 1-->
-                <div class="row" style="margin-bottom: 40px;">
+                <div class="row">
                   
                   <div class="col-md-3" style="margin-bottom: 10px;">
                     <span></span>
@@ -58,13 +58,13 @@
                   </div>
 
                   <div class="col-md-3" style="margin-bottom: 10px;">
-                      <span></span>
+                    <span></span>
                   </div>
 
                 </div>
          
                       <!--Row 2-->            
-                      <div class="row" style="margin-bottom: 40px;">
+                      <div class="row">
                       
                         <div class="col-md-3" style="margin-bottom: 10px;">
                           <span></span>
@@ -87,7 +87,7 @@
                       </div>
              
                             <!--Row 3-->            
-                            <div class="row" style="margin-bottom: 40px; margin-top: 20px;">             
+                            <div class="row">             
 
                               <div class="col-md-2" style="margin-bottom: 10px;">
                                 <span></span>
@@ -108,7 +108,7 @@
                             </div>
 
                                 <!--Row 4-->            
-                                <div class="row" style="margin-bottom: 40px; margin-top: 20px;">     
+                                <div class="row">     
                                 
                                   <button id="btn" type="button" class="btn btn-primary btn-lg btn-block">
                                     Generate Password
@@ -118,19 +118,19 @@
 
 
                                     <!--Row 5-->                
-                                    <div id="passwordRow" class="row" style="margin-bottom: 40px; margin-top: 20px; visibility: hidden;">             
+                                    <div id="passwordRow" class="row" style="visibility: hidden;">             
                                           
-                                      <div class="col-md-3" style="margin-bottom: 10px;">
-                                        <label class="form-check-label" for="numeric" aria-hidden="false">Your Password Is:</label>
+                                      <div class="col-md-3">
+                                        <label id="passwordIs" class="form-check-label" for="numeric" aria-hidden="false">Your Password Is:</label>
                                       </div>
-                                        <div class="col-md-9" style="margin-bottom: 10px;">
+                                        <div class="col-md-9">
                                             <p id="passwordResult"></p>
                                         </div>
                                            
                                     </div>
 
                                         <!--Row 6-->            
-                                          <div id="copyRow" class="row" style="margin-bottom: 40px; margin-top: 20px; visibility: hidden;">     
+                                          <div id="copyRow" class="row" style="visibility: hidden;">     
                                           
                                               <button id="copyBtn" type="button" class="btn btn-primary btn-lg btn-block">
                                                 Copy To Clipboard
